@@ -1,10 +1,13 @@
 
+import CartWidget from "../CartWidget/CartWidget"
 
 export default function NavBar() {
     return (
-        <div class='container'>
+        <div className='container'>
             <header className='header'>
-                <div class='container'>
+                <div className='container'>
+                    <h1>Tienda en línea</h1>
+                    <br></br>
                     <div id="navigation-bar">
                         <nav>
                             <ul>
@@ -14,11 +17,9 @@ export default function NavBar() {
                                 <li><a href="#">Portfolio</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li><a href="#">Contact</a></li>
-                                <a href="#" id="menu-icon"></a>
+                                <CartWidget count= {3} />
                             </ul>
                         </nav>
-                        <br></br>
-                        <h1>Mi primera tienda en línea</h1>
                     </div>
                 </div>
             </header>
