@@ -11,12 +11,12 @@ export default function NavBar() {
                     <div id="navigation-bar">
                         <nav>
                             <ul>
-                                <li><a href="#" id="logo">LOGO</a></li>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="https://test.com" id="logo">LOGO</a></li>
+                                <li><a href="https://test.com">Home</a></li>
+                                <li><a href="https://test.com">About</a></li>
+                                <li><a href="https://test.com">Portfolio</a></li>
+                                <li><a href="https://test.com">Services</a></li>
+                                <li><a href="https://test.com">Contact</a></li>
                                 <CartWidget count= {3} />
                             </ul>
                         </nav>

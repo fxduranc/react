@@ -39,7 +39,9 @@ li {
     display: inline;
     font-family: "Fira Sans", sans-serif;
     font-size: 17px;
+    padding: auto;
 }
+
 
 a {
     color: #f2f2f2;

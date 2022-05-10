@@ -1,13 +1,13 @@
 
-import ItemList from "./components/ItemsList/ItemListContainer";
+import ItemListContainer from "./components/ItemsListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
 
     <div className="miApp">
-        <NavBar></NavBar>
-        <ItemList></ItemList>
+        <NavBar />
+        <ItemListContainer category1={"Ropa"} category2={"Calzado"} category3={"Accesorios"}   />
     </div>
 
   );
