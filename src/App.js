@@ -8,6 +8,7 @@ function App() {
     <div className="miApp">
         <NavBar />
         <ItemListContainer category1={"Ropa"} category2={"Calzado"} category3={"Accesorios"}   />
+        
     </div>
 
   );
