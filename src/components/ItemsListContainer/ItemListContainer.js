@@ -1,5 +1,6 @@
 import React from "react"
 import ItemCount from "../ItemCount/ItemCount";
+import ItemList from "../ItemList/ItemList";
 
 
 export default function ItemListContainer({ category1, category2, category3 }) {
@@ -23,7 +24,11 @@ export default function ItemListContainer({ category1, category2, category3 }) {
                     </ul>
                 </div>
             </div >
+                       
             <ItemCount stock={5} initial={0} />
+
+            <ItemList />
+
         </>
     );
 
