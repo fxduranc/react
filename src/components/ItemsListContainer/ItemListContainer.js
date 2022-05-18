@@ -1,36 +1,39 @@
 import React from "react"
-import ItemCount from "../ItemCount/ItemCount";
+import { products } from "../Data/Productos"
+import { useEffect, useState } from "react";
+//import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 
 
-export default function ItemListContainer({ category1, category2, category3 }) {
+
+export default function ItemListContainer() {
+
+    const [productsList, setProductsList] = useState([])
+    const fetchProducts = new Promise((resolve, reject) => {
+        let condition = true
+        setTimeout(() => {
+            if (condition) {
+                resolve(products)
+            } else {
+                reject('Someting went wrong')
+            }
+        }, 2000)
+    })
+
+    useEffect(() => {
+        fetchProducts
+            .then((result) => setProductsList(result))
+            .catch((error) => console.log(error))
+    }, [])
+
+    console.log('Lista de Productos', productsList)
     return (
-        <>
-            <div className='container'>
-                <h1>Contenido de la Tienda</h1>
-                <div>
-                    <ul>
-                        <li>{category1}</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>{category2}</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>{category3}</li>
-                    </ul>
-                </div>
-            </div >
-                       
-            <ItemCount stock={5} initial={0} />
+        <div>
+            <ItemList productsList={productsList}/>
+        </div>
 
-            <ItemList />
 
-        </>
+
     );
-
 
 }
