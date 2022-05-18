@@ -1,13 +1,11 @@
 import React from "react"
 import { products } from "../Data/Productos"
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
+import ItemDetail from '../ItemDetails/ItemDetail'
 
-
-export default function ItemListContainer() {
-
-    const [productsList, setProductsList] = useState([])
-    const getProducts = new Promise((resolve, reject) => {
+export default function ItemDetailContainer() {
+    const [item, setItem] = useState([])
+    const getItem = new Promise((resolve, reject) => {
         let condition = true
         setTimeout(() => {
             if (condition) {
@@ -19,16 +17,15 @@ export default function ItemListContainer() {
     })
 
     useEffect(() => {
-        getProducts
-            .then((result) => setProductsList(result))
+        getItem
+            .then((res) => setItem(res.getItem[2]))
             .catch((error) => console.log(error))
     }, [])
 
-    console.log('Lista de Productos', productsList)
+    console.log(item)
     return (
         <div>
-            <ItemList productsList={productsList}/>
-  
+            <ItemDetail item={item}/>
         </div>
 
 

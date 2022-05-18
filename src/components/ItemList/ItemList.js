@@ -1,5 +1,3 @@
-//import Item from "../Item/Item";
-import { products } from "../Data/Productos"
 import Item from "../Item/Item";
 
 export default function ItemList(props) {

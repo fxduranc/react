@@ -1,4 +1,4 @@
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Link } from 'react-bootstrap';
 
 
 export default function Item({ product }) {
